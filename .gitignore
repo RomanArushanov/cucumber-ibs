@@ -1,0 +1,6 @@
+target
+.idea
+ibs-autotest-web.iml
+ibs
+.allure
+allure-results
