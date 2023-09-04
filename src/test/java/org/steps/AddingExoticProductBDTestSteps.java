@@ -84,7 +84,7 @@ public class AddingExoticProductBDTestSteps {
     @Когда("Проверяем, что записи больше нет в таблице  {string} {string} {string} {string}")
     public void checkProductAfter(String foodId, String foodName, String foodType, String foodExotic) {
         Product checkResultProduct = new Product(Integer.parseInt(foodId),
-                foodName, foodType, Boolean.valueOf(foodExotic));
+                foodName, foodType, Boolean.parseBoolean(foodExotic));
 
         Assertions.assertNotEquals(checkResultProduct, selectProduct(Integer.parseInt(foodId)),
                 "Запись с ID " + foodId + " отсутствует");
