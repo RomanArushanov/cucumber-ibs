@@ -16,11 +16,12 @@
         <file.encoding>${encoding.type}</file.encoding>
 
 
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
     <dependencies>
+
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
@@ -71,14 +72,6 @@
             <version>1.9.20</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>6.0.10</version>
-            <scope>test</scope>
-        </dependency>
-
         <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
         <dependency>
             <groupId>com.h2database</groupId>
@@ -97,8 +90,8 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>6.0.10</version>
             <scope>test</scope>
+            <version>5.3.24</version>
         </dependency>
 
     </dependencies>
@@ -113,7 +106,7 @@
                 <version>3.1.2</version>
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
-<!--                    <includes>**/TestRunner.java</includes>-->
+                    <includes>**/TestRunner.java</includes>
                     <argLine>
                         -Xmx1024m
                         -Dfile.encoding=${encoding.type}
@@ -126,6 +119,7 @@
                 </configuration>
             </plugin>
 
+
             <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-maven -->
             <plugin>
                 <groupId>io.qameta.allure</groupId>
@@ -137,6 +131,7 @@
                     <reportDirectory>${project.build.directory}/reports/allure-reports</reportDirectory>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
