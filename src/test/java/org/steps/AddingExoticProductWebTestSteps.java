@@ -82,7 +82,7 @@ public class AddingExoticProductWebTestSteps {
         driver.findElement(By.id("exotic")).click();
     }
 
-    @И("Проверил, что чек-бокс 'Экзотический выбран'")
+    @И("Проверил, что чек-бокс 'Экзотический' выбран")
     public void checkSelectCheckBox() {
         Assertions.assertTrue(driver.findElement(By.id("exotic")).isSelected(), "Чек-бокс не выбран");
     }
